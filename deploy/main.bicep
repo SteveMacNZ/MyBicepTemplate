@@ -1,0 +1,65 @@
+/*
+.SYNOPSIS
+  Azure Bicep: <purpose>
+.DESCRIPTION
+  Azure Bicep: <extended purpose> 
+.OUTPUTS
+  What outputs
+.NOTES
+  Version:        1.0.0.x
+  Author:         Steve McIntyre
+  Creation Date:  DD/MM/20YY
+  Purpose/Change: Initial Release
+.LINK
+  https://github.com/Name/Repo
+*/
+
+// ------------------------------------------------------[Script Parameters]--------------------------------------------------
+
+@description('Determine Location based on Resource Group Location')
+param location string = resourceGroup().location                      // determine location based off resource group
+
+@description('The name of the environment. This must be dev, tst, or prd.')
+@allowed([
+  'dev'
+  'tst'
+  'prd'
+  'npe'
+])
+param environmentName string = 'dev'                                  // Environment parameter
+
+@description('The Short Name of the Azure region into which the resources should be deployed')
+@allowed([
+  'nzn'
+  'aue'
+  'aus'
+  'use'
+])
+param shortlocation string = 'nzn'                                    // location short code
+
+@description('The unique name of the solution. This is used to ensure that resource names are unique')
+@minLength(5)
+@maxLength(30)
+param solutionName string = 'solutionname'
+
+@description('The instance number.')
+@minValue(1)
+@maxValue(10)
+param instance int = 1
+
+@description('The tags to apply to the resources.')
+param apptags object
+
+
+// -------------------------------------------------------[Declarations]------------------------------------------------------
+
+//variable to determine the name of the service
+var ServiceName = '<svc>-${solutionName}-${environmentName}-${shortlocation}-${instance}'
+
+// ----------------------------------------[Resources | Modules | Deployment]-------------------------------------------------
+
+resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' = {
+  name: ServiceName
+  location: location
+  tags: apptags
+}

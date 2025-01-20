@@ -15,4 +15,4 @@ The Azure infrastructure is defined using [Bicep][1].
 
 To deploy the projects's Azure resources, use the _`deploy/main.bicep`_ file.
 
-[1]: (https://www.microsoft.com/azure/azure-resource-manager/bicep)
+[1]: (https://microsoft.com/azure/azure-resource-manager/bicep)

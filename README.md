@@ -68,12 +68,12 @@ To reference modules internal to the project/repo use `module myModuleName './mo
 details on private bicep registry here
 
 [1]: https://microsoft.com/azure/azure-resource-manager/bicep
-[2]: (https://code.visualstudio.com/download)
-[3]: (https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
-[4]: (https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)
-[5]: (https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell)
-[6]: (https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-[7]: (https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install#install-manually)
-[8]: (https://aka.ms/avm)
-[9]: (https://azure.github.io/Azure-Verified-Modules/usage/quickstart/bicep/)
-[10]: (https://learn.microsoft.com/en-us/azure/well-architected/)
+[2]: https://code.visualstudio.com/download
+[3]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep
+[4]: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell
+[5]: https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell
+[6]: https://learn.microsoft.com/en-us/cli/azure/install-azure-cli
+[7]: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install#install-manually
+[8]: https://aka.ms/avm
+[9]: https://azure.github.io/Azure-Verified-Modules/usage/quickstart/bicep/
+[10]: https://learn.microsoft.com/en-us/azure/well-architected/

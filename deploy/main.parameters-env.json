@@ -17,7 +17,8 @@
     "apptags":{
       "value":{
         "application": "",
-        "what2": ""
+        "owner": "",
+        "codecenter": ""
       }
     }        
   }

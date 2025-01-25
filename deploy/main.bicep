@@ -1,23 +1,26 @@
 /*
-.SYNOPSIS
+SYNOPSIS
   Azure Bicep: <purpose>
-.DESCRIPTION
+DESCRIPTION
   Azure Bicep: <extended purpose> 
-.OUTPUTS
+OUTPUTS
   What outputs
-.NOTES
+NOTES
   Version:        1.0.0.x
   Author:         Steve McIntyre
   Creation Date:  DD/MM/20YY
   Purpose/Change: Initial Release
-.LINK
+LINK
   https://github.com/Name/Repo
+EXAMPLE
+
 */
 
 // ------------------------------------------------------[Script Parameters]--------------------------------------------------
 
 @description('Determine Location based on Resource Group Location')
-param location string = resourceGroup().location                      // determine location based off resource group
+//param location string = resourceGroup().location                      // uncomment to determine location based off resource group
+param location string                                                 // need to specify location in paramters file. comment out to use resource group location.
 
 @description('The name of the environment. This must be dev, tst, or prd.')
 @allowed([
@@ -38,8 +41,8 @@ param environmentName string = 'dev'                                  // Environ
 param shortlocation string = 'nzn'                                    // location short code
 
 @description('The unique name of the solution. This is used to ensure that resource names are unique')
-@minLength(5)
-@maxLength(30)
+@minLength(3)
+@maxLength(15)
 param solutionName string = 'solutionname'
 
 @description('The instance number.')
@@ -63,3 +66,14 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' = {
   location: location
   tags: apptags
 }
+
+// module referemce
+module myModule 'modules/mymodule.bicep' = {
+  name: 'whatname'
+}
+
+// ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
+/*
+Enter any extended help items here: (e.g., detailed help on functions, commented code blocks so they sit outside of the main script logic)
+
+*/

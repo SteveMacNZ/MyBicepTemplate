@@ -67,7 +67,7 @@ To reference modules internal to the project/repo use `module myModuleName './mo
 
 details on private bicep registry here
 
-[1]: (https://microsoft.com/azure/azure-resource-manager/bicep)
+[1]: https://microsoft.com/azure/azure-resource-manager/bicep
 [2]: (https://code.visualstudio.com/download)
 [3]: (https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
 [4]: (https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell)

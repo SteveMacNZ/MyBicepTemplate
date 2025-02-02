@@ -18,10 +18,24 @@ EXAMPLE
 
 // ------------------------------------------------------[Script Parameters]--------------------------------------------------
 
+@sys.description('Description of the Module Parameter')
+param paramName string
+
+@sys.description('Optional: Description of optional paramter')
+param optionalpramName string?
+
 // -------------------------------------------------------[Declarations]------------------------------------------------------
 
 // ----------------------------------------[Resources | Modules | Deployment]-------------------------------------------------
 
+
+// ------------------------------------------------------[Outputs]------------------------------------------------------------
+
+@sys.description('Output: Description of Modules Output')
+output modoutName string = paramName
+
+@sys.description('Output: optional output')
+output modoutOpt string? = optionalpramName
 
 // ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
 /*

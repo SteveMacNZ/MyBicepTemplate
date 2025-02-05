@@ -6,7 +6,7 @@
 - [How to use](#how-to-use)
 - [Prerequisites](#prerequisites)
 - [Additional recommended VS Code modules](#additional-recommended-vs-code-modules)
-- [Repositories](#repositories)
+- [Bicep Module Code Repositories](#bicep-module-code-repositories)
   - [Referencing AVM Public Modules](#referencing-avm-public-modules)
   - [Referencing internal modules](#referencing-internal-modules)
   - [Referencing private organisational registry](#referencing-private-organisational-registry)
@@ -45,7 +45,7 @@ The following modules are recommended to be installed in Visual Studio Code
 - Git History
 - GitLens
 
-## Repositories
+## Bicep Module Code Repositories
 
 Where possible [Azure Verified Modules (AVM)][8] public repo should be used when refeencing modules to deploy resources, review the [AVM Bicep Quickstart Guide][9] for more information. these should be used in both main deployment bicep and module bicep files where possible over indivudal manully coded modules. Align modules against the [Well Architected Framework (WAF)][10] using examples defined in the AVM documentation
 

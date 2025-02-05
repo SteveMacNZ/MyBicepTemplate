@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "apptags": {
+      "value": {
+        "application-name": "",
+        "owner": "",
+        "cost-centre": "",
+        "environment": ""
+      }
+    },
+    "location": {
+      "value": "New Zealand North"
+    },
+    "exampleString": {
+      "value": "test string"
+    },
+    "exampleInt": {
+      "value": 4
+    },
+    "exampleBool": {
+      "value": true
+    },
+    "exampleArray": {
+      "value": [
+        "value 1",
+        "value 2"
+      ]
+    },
+    "exampleObject": {
+      "value": {
+        "property1": "value 1",
+        "property2": "value 2"
+      }
+    },
+    "adminLogin": {
+      "value": "<your-admin-login>"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.KeyVault/vaults/<key-vault-name>"
+        },
+        "secretName": "<secret-name>",
+        "secretVersion": "<secret-version>"
+      }
+    }
+  }
+}

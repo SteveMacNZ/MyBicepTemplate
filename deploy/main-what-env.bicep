@@ -53,6 +53,16 @@ param instance int = 1
 @description('The tags to apply to the resources.')
 param apptags object
 
+param exampleString string
+param exampleInt int
+param exampleBool bool
+param exampleArray array 
+param exampleObject object
+
+param adminLogin string
+
+@secure()
+param adminPassword string
 
 // -------------------------------------------------------[Declarations]------------------------------------------------------
 
@@ -68,9 +78,18 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2023-12-01' = {
 }
 
 // module referemce
-module myModule 'modules/mymodule.bicep' = {
+module myModule 'modules/moduleName/mod-moduleName.bicep' = {
   name: 'whatname'
+  params:{
+    paramName: 'A String'
+    optionalpramName: ''
+  }
 }
+
+// ------------------------------------------------------[Outputs]------------------------------------------------------------
+
+@description('Output: Description of output')
+output myoutputName string = appServicePlan.name
 
 // ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
 /*

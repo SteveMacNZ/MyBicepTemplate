@@ -7,9 +7,11 @@ NOTES
   Version:        1.0.0.x
   Author:         Steve McIntyre
   Creation Date:  DD/MM/20YY
-  Purpose/Change: Initial Release
+  Purpose/Change: Initial Release  
 LINK
   https://github.com/Name/Repo
+EXTENSIONS
+  VS Code better-comments required for ehananced commenting 
 */
 
 using './main-what-env.bicep'    // Specifiy the name of the bicep file this parameter file applies to
@@ -37,3 +39,18 @@ param exampleObject = {
 
 param adminLogin = '<your-admin-login>'
 param adminPassword = az.getSecret('<subscription-id>', '<rg-name>', '<key-vault-name>', '<secret-name>', '<secret-version>')
+
+
+// ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
+/*
+
+! this 
+& this
+~ this
+^ this
+* this
+// this
+? this
+todo this
+
+*/

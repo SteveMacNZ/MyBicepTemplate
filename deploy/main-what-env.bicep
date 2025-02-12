@@ -12,6 +12,8 @@ NOTES
   Purpose/Change: Initial Release
 LINK
   https://github.com/Name/Repo
+EXTENSIONS
+  VS Code better-comments required for ehananced commenting  
 EXAMPLE
 
 */
@@ -23,21 +25,11 @@ EXAMPLE
 param location string                                                 // need to specify location in paramters file. comment out to use resource group location.
 
 @description('The name of the environment. This must be dev, tst, or prd.')
-@allowed([
-  'dev'
-  'tst'
-  'prd'
-  'npe'
-])
+@allowed(['dev','tst','prd','npe'])
 param environmentName string = 'dev'                                  // Environment parameter
 
 @description('The Short Name of the Azure region into which the resources should be deployed')
-@allowed([
-  'nzn'
-  'aue'
-  'aus'
-  'use'
-])
+@allowed(['nzn','aue','aus','use'])
 param shortlocation string = 'nzn'                                    // location short code
 
 @description('The unique name of the solution. This is used to ensure that resource names are unique')
@@ -93,6 +85,14 @@ output myoutputName string = appServicePlan.name
 
 // ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
 /*
-Enter any extended help items here: (e.g., detailed help on functions, commented code blocks so they sit outside of the main script logic)
+
+! this 
+& this
+~ this
+^ this
+* this
+// this
+? this
+todo this
 
 */

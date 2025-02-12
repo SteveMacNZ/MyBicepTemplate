@@ -39,6 +39,14 @@ output modoutOpt string? = optionalpramName
 
 // ------------------------------------------------------[ExtendedHelp]-------------------------------------------------------
 /*
-Enter any extended help items here: (e.g., detailed help on functions, commented code blocks so they sit outside of the main script logic)
+
+! this 
+& this
+~ this
+^ this
+* this
+// this
+? this
+todo this
 
 */
